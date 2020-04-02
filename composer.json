@@ -1,0 +1,32 @@
+{
+  "name": "ennnnny/laravel-es-log",
+  "description": "Elasticsearch logger handler",
+  "keywords": ["Elasticsearch", "Logger", "laravel", "log"],
+  "require": {
+    "php": "^7.2",
+    "laravel/framework": "^6.0|^7.0",
+    "monolog/monolog": "^2.0",
+    "elasticsearch/elasticsearch": "^7.0"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "ennnnny",
+      "email": "kuye1130@gmail.com",
+      "homepage": "https://github.com/ennnnny/laravel-es-log",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "EsLog\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "EsLog\\EsLogServiceProvider"
+      ]
+    }
+  }
+}
