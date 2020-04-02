@@ -18,7 +18,7 @@ class EsLogServiceProvider extends LaravelServiceProvider
          * 发布配置文件
          */
         $this->publishes([
-            __DIR__ . '/../../config/es_log.php' => config_path('es_log.php'),
+            __DIR__ . '/../config/es_log.php' => config_path('es_log.php'),
         ], 'ennnnny.es_log');
     }
 

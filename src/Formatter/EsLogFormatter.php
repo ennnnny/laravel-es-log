@@ -1,4 +1,5 @@
 <?php
+
 namespace EsLog\Formatter;
 
 use Monolog\Formatter\ElasticsearchFormatter;
