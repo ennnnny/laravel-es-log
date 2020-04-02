@@ -38,3 +38,7 @@ ELASTICSEARCH_SCHEME=http
 ELASTICSEARCH_USER=
 ELASTICSEARCH_PASS=
 ```
+## Credits
+
+- [betterde](https://github.com/betterde/logger)
+- [ahmedofali](https://github.com/ahmedofali/laravel-elk-log)
