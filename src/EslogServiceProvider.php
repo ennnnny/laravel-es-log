@@ -33,7 +33,7 @@ class EslogServiceProvider extends LaravelServiceProvider
         });
 
         $this->app->bind(EslogFormatter::class, function ($app) {
-            return new EslogFormatter(config('elk.options.index'), config('elk.options.type'));
+            return new EslogFormatter(config('es_log.options.index'), config('es_log.options.type'));
         });
     }
 }
