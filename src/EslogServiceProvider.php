@@ -1,13 +1,13 @@
 <?php
 
-namespace EsLog;
+namespace Eslog;
 
 use Elasticsearch\Client;
 use Elasticsearch\ClientBuilder;
-use EsLog\Formatter\EsLogFormatter;
+use Eslog\Formatter\EslogFormatter;
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 
-class EsLogServiceProvider extends LaravelServiceProvider
+class EslogServiceProvider extends LaravelServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -32,8 +32,8 @@ class EsLogServiceProvider extends LaravelServiceProvider
                 ->setRetries(config('es_log.elasticsearch.retries'))->build();
         });
 
-        $this->app->bind(EsLogFormatter::class, function ($app) {
-            return new EsLogFormatter(config('elk.options.index'), config('elk.options.type'));
+        $this->app->bind(EslogFormatter::class, function ($app) {
+            return new EslogFormatter(config('elk.options.index'), config('elk.options.type'));
         });
     }
 }

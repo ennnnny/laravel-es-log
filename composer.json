@@ -1,7 +1,12 @@
 {
   "name": "ennnnny/laravel-es-log",
   "description": "Elasticsearch logger handler",
-  "keywords": ["Elasticsearch", "Logger", "laravel", "log"],
+  "keywords": [
+    "Elasticsearch",
+    "Logger",
+    "laravel",
+    "log"
+  ],
   "require": {
     "php": "^7.2",
     "laravel/framework": "^6.0|^7.0",
@@ -19,13 +24,13 @@
   ],
   "autoload": {
     "psr-4": {
-      "EsLog\\": "src/"
+      "Eslog\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "EsLog\\EsLogServiceProvider"
+        "Eslog\\EslogServiceProvider"
       ]
     }
   }

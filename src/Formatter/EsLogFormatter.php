@@ -1,10 +1,10 @@
 <?php
 
-namespace EsLog\Formatter;
+namespace Eslog\Formatter;
 
 use Monolog\Formatter\ElasticsearchFormatter;
 
-class EsLogFormatter extends ElasticsearchFormatter
+class EslogFormatter extends ElasticsearchFormatter
 {
     public function __construct(string $index, string $type)
     {
