@@ -23,7 +23,7 @@ Now we can add the `channel` of `channels` in `config/logging.php` file.
             'level' => config('es_log.level'),
             'bubble' => config('es_log.bubble')
         ],
-        'formatter' => \EsLog\Formatter\EsLogFormatter::class,
+        'formatter' => \Eslog\Formatter\EslogFormatter::class,
     ],
 ],
 ```
