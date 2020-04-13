@@ -32,6 +32,10 @@ class EslogFormatter extends ElasticsearchFormatter
                 'previous' => $exception->getPrevious(),
                 'trace' => config('es_log.exception.trace') ? $exception->getTraceAsString() : []
             ];
+        } elseif (count($record['context']) > 1) {
+            $context = json_encode($record['context']);
+            $record['context'] = [];
+            $record['context']['data'] = $context;
         }
 
         return $record;
