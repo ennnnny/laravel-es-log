@@ -28,9 +28,14 @@ class EslogServiceProvider extends LaravelServiceProvider
     public function register()
     {
         $this->app->singleton(Client::class, function ($app) {
-            return ClientBuilder::create()->setHosts(config('es_log.elasticsearch.hosts'))
-                ->setSSLVerification(config('es_log.elasticsearch.cert'))
-                ->setRetries(config('es_log.elasticsearch.retries'))->build();
+            if (!empty(config('es_log.elasticsearch.cert'))) {
+                return ClientBuilder::create()->setHosts(config('es_log.elasticsearch.hosts'))
+                    ->setSSLVerification(config('es_log.elasticsearch.cert'))
+                    ->setRetries(config('es_log.elasticsearch.retries'))->build();
+            } else {
+                return ClientBuilder::create()->setHosts(config('es_log.elasticsearch.hosts'))
+                    ->setRetries(config('es_log.elasticsearch.retries'))->build();
+            }
         });
 
         $this->app->bind(EslogFormatter::class, function ($app) {
